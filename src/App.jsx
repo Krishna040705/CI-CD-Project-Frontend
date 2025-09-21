@@ -15,7 +15,7 @@ function App() {
     setError(null);
 
     // Use relative path, Vite will proxy /api to backend in dev
-    fetch(`/api/weather/${city}`)
+fetch(`http://localhost:9190/api/weather/${city}`)
       .then(response => {
         if (!response.ok) {
           throw new Error('City not found or server error.');
