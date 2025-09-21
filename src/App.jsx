@@ -15,7 +15,7 @@ function App() {
     setError(null);
 
     // Corrected fetch with template literal
-    fetch(`http://localhost:9191/api/weather/${city}`)
+    fetch(`http://localhost:9190/api/weather/${city}`)
       .then(response => {
         if (!response.ok) {
           throw new Error('City not found or server error.');
