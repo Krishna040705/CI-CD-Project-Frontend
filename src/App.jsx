@@ -14,7 +14,8 @@ function App() {
     setWeather(null);
     setError(null);
 
-fetch(`http://localhost:9191/api/weather/${city}`)
+    // Corrected fetch with template literal
+    fetch(`http://localhost:9191/api/weather/${city}`)
       .then(response => {
         if (!response.ok) {
           throw new Error('City not found or server error.');
@@ -55,11 +56,11 @@ fetch(`http://localhost:9191/api/weather/${city}`)
           <div className="weather-card">
             <h2>{weather.name}</h2>
 
-            {/* Weather Icon */}
+            {/* Corrected weather icon with backticks */}
             {weather.weatherIcon && (
               <img
                 className="weather-icon"
-                src={http://openweathermap.org/img/wn/${weather.weatherIcon}@2x.png}
+                src={`http://openweathermap.org/img/wn/${weather.weatherIcon}@2x.png`}
                 alt={weather.weatherDescription}
               />
             )}
