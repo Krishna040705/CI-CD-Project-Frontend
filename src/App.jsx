@@ -14,8 +14,7 @@ function App() {
     setWeather(null);
     setError(null);
 
-// CORRECT - Use a relative path
-fetch(`/api/weather/${city}`)
+    fetch(http://localhost:9191/api/weather/${city})
       .then(response => {
         if (!response.ok) {
           throw new Error('City not found or server error.');
@@ -60,7 +59,7 @@ fetch(`/api/weather/${city}`)
             {weather.weatherIcon && (
               <img
                 className="weather-icon"
-                src={`http://openweathermap.org/img/wn/${weather.weatherIcon}@2x.png`}
+                src={http://openweathermap.org/img/wn/${weather.weatherIcon}@2x.png}
                 alt={weather.weatherDescription}
               />
             )}
